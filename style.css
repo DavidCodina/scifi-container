@@ -357,7 +357,6 @@ pre {
   flex: 1;
   padding: 30px 50px 50px 50px;
   color: var(--text-color);
-  pointer-events: none;
   background: var(--background-color);
   border: 2px solid var(--border-color);
   border-top-left-radius: 25px;
