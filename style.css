@@ -84,6 +84,8 @@ pre {
   0px 12px 4px  rgba(16, 16, 16, 0.2);
 }
 
+@media (max-width: 400px) { .text-white-3d { font-size: 32px; }}
+
 .child-mb-1 > * { margin-bottom: 0.25rem !important; }
 .child-mb-2 > * { margin-bottom: 0.5rem !important;  }
 .child-mb-3 > * { margin-bottom: 1rem !important;    }
@@ -237,9 +239,75 @@ pre {
 
 .horizontal-ruler hr:last-child { margin-right: -10px; } /* This assumes that the final line has width: 10px; */
 
+@media (max-width: 575px) {
+  .horizontal-ruler hr:nth-child(2),
+  .horizontal-ruler hr:nth-child(3),
+  .horizontal-ruler hr:nth-child(4),
+  .horizontal-ruler hr:nth-child(5),
+  .horizontal-ruler hr:nth-child(6),
+  .horizontal-ruler hr:nth-child(34),
+  .horizontal-ruler hr:nth-child(35),
+  .horizontal-ruler hr:nth-child(36),
+  .horizontal-ruler hr:nth-child(37),
+  .horizontal-ruler hr:nth-child(38) {
+    display:none;
+  }
+}
+
+@media (max-width: 450px) {
+  .horizontal-ruler hr:nth-child(15),
+  .horizontal-ruler hr:nth-child(16),
+  .horizontal-ruler hr:nth-child(17),
+  .horizontal-ruler hr:nth-child(18),
+  .horizontal-ruler hr:nth-child(19),
+  .horizontal-ruler hr:nth-child(21),
+  .horizontal-ruler hr:nth-child(22),
+  .horizontal-ruler hr:nth-child(23),
+  .horizontal-ruler hr:nth-child(24),
+  .horizontal-ruler hr:nth-child(25) {
+    display:none;
+  }
+
+  .horizontal-ruler hr:nth-child(10){
+    width: 15px;
+    margin-right: -5px;
+  	transform: rotate(90deg);
+  }
+
+  .horizontal-ruler hr:nth-child(20){
+    width: 25px;
+    margin-right: -15px;
+    transform: rotate(90deg);
+  }
+
+  .horizontal-ruler hr:nth-child(30){
+    width: 15px;
+    margin-right: -5px;
+  	transform: rotate(90deg);
+  }
+}
+
+@media (max-width: 400px) {
+  .horizontal-ruler {
+    margin: 50px auto;
+    max-width: 300px;
+  }
+
+  .horizontal-ruler hr:nth-child(7),
+  .horizontal-ruler hr:nth-child(8),
+  .horizontal-ruler hr:nth-child(11),
+  .horizontal-ruler hr:nth-child(12),
+  .horizontal-ruler hr:nth-child(26),
+  .horizontal-ruler hr:nth-child(27),
+  .horizontal-ruler hr:nth-child(30),
+  .horizontal-ruler hr:nth-child(31) {
+    display: none;
+  }
+}
+
 
 /* =============================================================================
-                         polygon-container
+                           polygon-container
 ============================================================================= */
 
 
@@ -247,7 +315,6 @@ pre {
   --text-color: #333;
   --background-color:  rgb(245,245,245);
   --border-color:      rgb(150,150,150);
-
   display: flex;
   position: relative;
   min-height: 300px;
@@ -302,6 +369,12 @@ pre {
     calc(0% + 75px)   100%,
     0%                calc(100% - 75px)
   );
+}
+
+@media (max-width: 450px) {
+  .polygon-container-inner {
+    padding: 30px 30px 50px 30px;
+  }
 }
 
 
